@@ -10,11 +10,15 @@ async function main() {
     project = await createProject();
     scaffolder = new Scaffolder(project);
 
+    console.log(`Generating project "${project.name}"...`);
+    await scaffolder.generateProject();
+    console.log(`Finished generating project!`);
+
+    await addPackages();
+
     console.log(`Building project "${project.name}"...`);
     await scaffolder.buildProject();
     console.log(`Finished building project!`);
-
-    await addPackages();
 
     console.log(`Deploying to Heroku...`);
     await scaffolder.deployToHeroku();

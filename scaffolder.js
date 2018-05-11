@@ -7,8 +7,11 @@ class Scaffolder {
         this.project = project;
     }
 
-    async buildProject() {
+    async generateProject() {
         await execCommand(`npx ${settings.starterKits.createReactApp.name} ${this.project.name}`);
+    }
+
+    async buildProject() {
         await execCommand(`npm run build`, {cwd: this.project.path});
     }
 
@@ -22,6 +25,7 @@ class Scaffolder {
             `heroku create ${this.project.name} --buildpack ${settings.starterKits.createReactApp.buildPack}`,
             {cwd: this.project.path}
         );
+        await execCommand(`heroku git:remote -a ${this.project.name}`, {cwd: this.project.path});
         await execCommand(`git add .`, {cwd: this.project.path});
         await execCommand(`git commit -m "${settings.git.initialCommitMessage}"`, {cwd: this.project.path});
         await execCommand(`git push heroku master`, {cwd: this.project.path});
