@@ -18,7 +18,7 @@ node index
 
 ### What the files contain:
 
-- **index.js** - Entry point - Takes user options for scaffolding the project
+- **index.js** - The main entry point. Takes user options and scaffolds a React project
 - **user-input.js** - Gathers user input from the console
 - **scaffolder.js** - Handles building the project, adding packages and deployment
 - **settings.js** - Application settings for starter kits and available package list
