@@ -2,14 +2,12 @@
 Scaffolding for a React app built with Crowdbotics
 
 ### Installation
+npm install
 
-### What the files contain:
+### How to run
+node index
 
-- **index.js** - Entry point - Gathers user options for scaffolding the project
-- **scaffolder.js** - Handles building the project, adding packages and deployment
-- **settings.js** - Application settings for starter kits and available package list
-
-### Scaffold Steps
+### Scaffolding Steps
 
 1) Prompts user for project name
 2) Generates a React app using create-react-app
@@ -17,3 +15,9 @@ Scaffolding for a React app built with Crowdbotics
 4) Builds the project
 5) Deploys to Heroku using a buildpack
 6) Opens the Heroku app in your default browser
+
+### What the files contain:
+
+- **index.js** - Entry point - Gathers user options for scaffolding the project
+- **scaffolder.js** - Handles building the project, adding packages and deployment
+- **settings.js** - Application settings for starter kits and available package list
