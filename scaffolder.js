@@ -8,7 +8,11 @@ class Scaffolder {
     }
 
     async generateProject() {
-        await execCommand(`npx ${settings.starterKits.createReactApp.name} ${this.project.name}`);
+        await execCommand(`mkdir ${this.project.path}`);
+        await execCommand(
+            `npx ${settings.starterKits.createReactApp.name} ${this.project.name}`,
+            {cwd: settings.outputPath}
+        );
     }
 
     async buildProject() {
@@ -32,7 +36,7 @@ class Scaffolder {
     }
 
     async openHerokuApp() {
-        await execCommand(`heroku open -a ${this.project.name}`);
+        await execCommand(`heroku open -a ${this.project.name}`, {cwd: this.project.path});
     }
 }
 

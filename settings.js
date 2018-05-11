@@ -1,4 +1,7 @@
+const path = require('path');
+
 const settings = {
+    outputPath: path.join(__dirname, 'generated-apps'),
     starterKits: {
         createReactApp: {
             name: 'create-react-app',
