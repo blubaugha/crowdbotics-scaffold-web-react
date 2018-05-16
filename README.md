@@ -18,7 +18,9 @@ node index
 
 ### What the files contain:
 
-- **index.js** - The main entry point. Takes user options and scaffolds a React project
+- **index.js** - The main entry point. Takes user options and scaffolds a React project and then deploys it to Heroku
 - **user-input.js** - Gathers user input from the console
-- **scaffolder.js** - Handles building the project, adding packages and deployment
-- **settings.js** - Application settings for starter kits and available package list
+- **command.js** - Runs commands
+- **heroku-deployer.js** - Deploys a project to heroku
+- **scaffolder.js** - Handles generating and building a project, as well as adding packages to it
+- **settings.js** - Application settings

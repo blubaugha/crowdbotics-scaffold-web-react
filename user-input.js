@@ -3,7 +3,7 @@ const settings = require('./settings');
 const path = require('path');
 
 class UserInput {
-    static async createProject() {
+    static async getProjectName() {
         const questions = [{
             type: 'input',
             name: 'projectName',
@@ -29,7 +29,7 @@ class UserInput {
         return answers.shouldAddPackages;
     }
 
-    static async addPackage() {
+    static async getPackageName() {
         const questions = [{
             type: 'list',
             name: 'packageName',
