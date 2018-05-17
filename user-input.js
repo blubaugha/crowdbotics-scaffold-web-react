@@ -3,7 +3,7 @@ const settings = require('./settings');
 const path = require('path');
 
 class UserInput {
-    static async getProjectName() {
+    static async getProject() {
         const questions = [{
             type: 'input',
             name: 'projectName',

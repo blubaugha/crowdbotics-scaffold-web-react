@@ -3,7 +3,7 @@ const HerokuDeployer = require('./heroku-deployer');
 const UserInput = require('./user-input');
 
 async function main() {
-    const project = await UserInput.getProjectName();
+    const project = await UserInput.getProject();
     const scaffolder = new Scaffolder(project);
     const herokuDeployer = new HerokuDeployer(project);
 
