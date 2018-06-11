@@ -7,6 +7,9 @@ npm install
 ### How to run
 node index
 
+### Tutorial ###
+[Here](wiki/Tutorial "Here")
+
 ### Scaffolding Steps
 
 1) Prompts user for project name
