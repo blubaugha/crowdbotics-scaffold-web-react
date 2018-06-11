@@ -8,7 +8,7 @@ npm install
 node index
 
 ### Tutorial ###
-[Here](https://github.com/blubaugha/crowdbotics-scaffold-web-react/wiki/Tutorial "Here")
+[Here](../../wiki/Tutorial "Here")
 
 ### Scaffolding Steps
 
